@@ -1,0 +1,60 @@
+Roll No: <09>
+-- Name: <fahmitha>
+-- Program: <assignment II>
+-- 
+
+
+--
+-- Table structure for table <faculty>
+--
+
+ alter table faculty modify specialization varchar(20);
+
+--
+-- Table structure for table <subject>
+--
+ alter table subject add duration int;
+ alter table subject drop column sdate;
+ alter table subject drop column edate;
+
+--
+-- Table structure for table <teaches>
+--
+  create table teaches(fno char(5) not null,sname varchar(15) not null,sdate date not null,edate date not null,primary key(fno,sname),foreign    key(fno)references faculty(fno),foreign key(sname)references subject(sname));
+
+
+
+--
+-- Dumping data for table <faculty>
+--
+
+   insert into faculty values('202','joju','2020-03-12','maths');
+   insert into faculty values('203','renju','2020-03-15','physics');
+   insert into faculty values('204','manju','2020-03-16','statistics');
+   insert into faculty values('205','sonu','2020-03-20','networks')
+   insert into faculty values('206','gayu','2020-03-19','os'); 
+
+--
+-- Dumping data for table <subject>
+--
+  
+  insert into subject values('maths','2020-03-04','2020-09-24','104','202');
+  insert into subject values('physics','2020-03-06','2020-09-26','101','203');
+  insert into subject values('statistics','2020-03-18','2020-09-20','101','204');
+  insert into subject values('networks','2020-03-07','2020-09-2','103','205');
+  insert into subject values('os','2020-03-22','2020-09-11','105','206'); 
+
+
+   
+
+   
+
+
+
+--
+-- SQl Query Statements
+--
+
+-- -----SQL query statments preceeded by the its question-------- # This line may be removed in the actual file
+-- -----Question number should be commented---------------#This line may be removed in the actual file
+

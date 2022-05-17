@@ -1,0 +1,52 @@
+ Roll No: <09>
+-- Name: <fahmitha>
+-- Program: <Assignment III>
+-- 
+
+
+--
+-- Table structure for table <faculty>
+--
+  create table teaches(fno char(5) not null,sname varchar(15) not null,sdate date not null,edate date not null,primary key(fno,sname),foreign      key(fno)references faculty(fno),foreign key(sname)references subject(sname));
+
+
+ 
+--
+-- Dumping data for table <table_name>
+--
+  insert into teaches values('202','maths','2020-03-04','2020-09-24');
+  insert into teaches values('203','physics','2020-03-06','2020-09-26');
+  insert into teaches values('204','statistics','2020-03-18','2020-09-20');
+  insert into teaches values('205','networks','2020-03-07','2020-09-02')
+  insert into teaches values('206','os','2020-03-22','2020-09-11'); 
+-- 
+--
+-- SQl Query Statements
+--
+--Question2--------------
+
+  update subject set duration=4;
+
+--Question3--------------
+
+  select * from faculty where doj>='2020-03-10';
+
+--Question4--------------
+
+  select * from subject where roomno=101 and duration>2;
+
+--Question5--------------
+
+  select * from teaches where sdate>='2020-04-01' and edate<='2020-04-30';
+
+--Question6--------------
+
+  select faculty.fname,subject.sname,subject.duration from faculty,subject where faculty.fno=subject.fno and subject.duration;
+
+
+  
+
+  
+-- -----SQL query statments preceeded by the its question-------- # This line may be removed in the actual file
+-- -----Question number should be commented---------------#This line may be removed in the actual file
+
