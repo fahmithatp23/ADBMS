@@ -1,0 +1,39 @@
+-- 
+-- Roll No: <09>
+-- Name: <FAHMITHA TP>
+-- Program: <MongoDB Operations>
+-- 
+
+
+--
+-- Table structure for table <order>
+--
+   db.createCollection("order")
+
+--
+-- Dumping data for table <table_name>
+--
+
+-- --------insert/update statement commands----------- # This line may be removed in the actcual file
+
+-- 
+  db.order.insert({order_no:"01",year:2020,paid:"Y",cost:{price:30,currency:"INR"},items:{pno:"P1",colors:["blue","black"],quantity:15},delivery_day:5})
+ 
+  db.order.insert({order_no:"02",year:2020,paid:"Y",cost:{price:13,currency:"DLR"},items:[{pno:"P2",colors:"white",quantity:4},{pno:"P3",color:["white","black"],quantity:1}],delivery_day:4})
+
+  db.order.insert({order_no:"03",year:2018,paid:"N",cost:{price:33,currency:"EUR"},items:{pno:"P3",colors:["blue","black"],quantity:4},delivery_day:4})
+ 
+  db.order.insert({order_no:"04",year:2017,paid:"Y",cost:{price:17,currency:"INR"},items:[{pno:"P2",colors:["pink","black"],quantity:14},{pno:"P4",color:"white",quantity:1}],delivery_day:2})
+ 
+   db.order.insert({order_no:"05",year:2020,paid:"Y",cost:{price:19,currency:"INR"},items:{pno:"P1",quantity:15},delivery_day:3})
+
+  
+-- SQl Query Statements
+--
+  db.order.find({paid:"Y"}).pretty()
+
+
+
+-- -----SQL query statments preceeded by the its question-------- # This line may be removed in the actual file
+-- -----Question number should be commented---------------#This line may be removed in the actual file
+
